@@ -10,7 +10,7 @@ public class Account {
     private String type;
 
     @OneToOne
-    @JoinColumn(name = "customer_id", nullable = false)
+    @JoinColumn(name = "customer_id", nullable = false, unique = true)
     private Customer customer;
 
     public Account() {
@@ -35,5 +35,13 @@ public class Account {
 
     public void setType(String type) {
         this.type = type;
+    }
+
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
     }
 }
