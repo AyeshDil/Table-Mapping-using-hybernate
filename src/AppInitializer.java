@@ -5,6 +5,9 @@ import org.hibernate.cfg.Configuration;
 
 public class AppInitializer {
     public static void main(String[] args) {
+
+
+
         Configuration configuration = new Configuration().configure("hibernate.cfg.xml")
                 .addAnnotatedClass(Customer.class)
                 .addAnnotatedClass(Account.class);
